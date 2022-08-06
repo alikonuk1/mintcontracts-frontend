@@ -3,7 +3,7 @@
 }
 
 .main {
-  background: #5b5b5b;
+  background: #ffffff;
   min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
@@ -42,7 +42,7 @@
 }
 
 .title {
-  color:#eaeaea;
+  color:#000000;
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
@@ -60,7 +60,7 @@
 }
 
 .desc {
-  color: #eaeaea;
+  color: #2c2c2c;
 }
 
 .code {
