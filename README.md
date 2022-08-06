@@ -1,29 +1,18 @@
-# NFT Factory
+# MintContracts Factory
 
-![demo](https://user-images.githubusercontent.com/23249402/172031776-84fbe00e-70de-4090-9be9-e7e21d8d5d1c.gif)
+- one-click ERC721SB smart contract deployment.
+- Networks: Polygon, Mumbai, Goerli.
+- Powered by: https://github.com/alikonuk1/mintcontracts
 
-- [Demo](https://nftfactory.vercel.app/).
-- one-click ERC721 smart contract deployment.
-- Networks: Polygon, Mumbai, Arbitrum Rinkeby, Optimism Kovan, Goerli.
-- Powered by: https://github.com/SweetmanTech/nft-factory-contract
+## Deployed Factory Contracts
 
-## Safety
-
-```diff
-- WARNING: these contracts are unaudited
-```
-
-This is **experimental software** and is provided on an "as is" and "as available" basis.
-
-We **do not give any warranties** and **will not be liable for any loss** incurred through any use of this codebase.
-
-## Verified Factory Deployments
-
-- `Goerli Testnet` - [0x377022d8ACb2eBDC7283724DaaD0CEAA6fAd8F84](https://goerli.etherscan.io/address/0x377022d8ACb2eBDC7283724DaaD0CEAA6fAd8F84#code)
-- `Optimism Testnet` - [0x4C0a36F7f46893d01CF7F3541fcB171e7A4bF148](https://kovan-optimistic.etherscan.io/address/0x4C0a36F7f46893d01CF7F3541fcB171e7A4bF148#code)
-- `Polygon` - [0x314dE0B249D94241FB9601D77439aEB5870B2dA2](https://polygonscan.com/address/0x314dE0B249D94241FB9601D77439aEB5870B2dA2#code)
-- `Polygon Mumbai` - [0xC9aeCad048713F7f58F0276f39de1126f6d4f288](https://mumbai.polygonscan.com/address/0xC9aeCad048713F7f58F0276f39de1126f6d4f288#code)
-- `Arbitrum Testnet` - [0xbae835d4C2f0670cA9395915Cb01239E18b2AbE5](https://testnet.arbiscan.io/address/0xbae835d4C2f0670cA9395915Cb01239E18b2AbE5#code)
+- `Ethereum` - [To be deployed..](https://etherscan.io)
+- `Polygon` - [0x74eBee5c642701c011f8f1fCC336Af6C524e7754](https://polygonscan.com/address/0x74ebee5c642701c011f8f1fcc336af6c524e7754#code)
+- `Optimism` - [To be deployed..](https://optimistic.etherscan.io)
+- `Bsc` - [To be deployed..](https://bscscan.com)
+- `Goerli` - [0x40ba239270CF49030837279C1D01781CBf377F6E](https://goerli.etherscan.io/address/0x40ba239270CF49030837279C1D01781CBf377F6E#code)
+- `Mumbai` - [0x0a80Ed498f9977c80E6354723cd92064eb925fA4](https://mumbai.polygonscan.com/address/0x0a80Ed498f9977c80E6354723cd92064eb925fA4#code)
+- `Optimism Testnet` - [To be deployed..](https://kovan-optimistic.etherscan.io)
 
 ## Technologies used:
 
@@ -31,14 +20,12 @@ We **do not give any warranties** and **will not be liable for any loss** incurr
 - Web Framework: [Next JS (create-next-app)](https://nextjs.org/docs/api-reference/create-next-app).
 - React Component Library: [material-ui (mui)](https://mui.com/)
 
-## Getting Started
+## Local development
 
 ```
-git clone git@github.com:SweetmanTech/nft-factory.git
-cd nft-factory
+git clone https://github.com/alikonuk1/mintcontracts-frontend.git
+cd mintcontracts-frontend
 ```
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 Then, run the development server:
 
@@ -50,15 +37,13 @@ yarn
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Safety
 
-## Learn More
+```diff
+- WARNING: these contracts are unaudited
+```
 
-To learn more about Next.js, take a look at the following resources:
+This is **experimental software** and is provided on an "as is" and "as available" basis.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+We **do not give any warranties** and **will not be liable for any loss** incurred through any use of this codebase.
