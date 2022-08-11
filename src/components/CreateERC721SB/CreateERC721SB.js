@@ -18,8 +18,8 @@ const CreateERC721SB = ({ onDeployed }) => {
 
   const [name, setName] = useState("My Soulbound Token");
   const [symbol, setSymbol] = useState("SBT");
-  const [tokenURI, setTokenURI] = useState("");
-  const [owner, setOwner] = useState("");
+  const [tokenURI, setTokenURI] = useState("https://goerli.etherscan.io/address/0x40ba239270CF49030837279C1D01781CBf377F6E#code");
+  const [owner, setOwner] = useState(account?.address);
   return (
     <Box
       sx={{
@@ -44,9 +44,9 @@ const CreateERC721SB = ({ onDeployed }) => {
         onChange={(e) => setTokenURI(e.target.value)}
       />
       <TextField
-        value={owner}
+        inputProps={owner}
         label="Contract Owner"
-        onChange={(e) => setOwner(e.target.value)}
+        onChange={(e) => setOwner(e.target.inputProps)}
       />
       <ButtonCreateERC721SB onDeployed={onDeployed} name={name} symbol={symbol} tokenURI={tokenURI} owner={owner}/>
     </Box>
