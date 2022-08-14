@@ -36,9 +36,11 @@ const MintNFT = ({ contractAddress }) => {
     setPendingTx(false);
   };
 
+  const [to, setTo] = useState("Address");
+
   const mint = async () => {
     setPendingTx("Sign transaction to Mint your Soulbound NFT.");
-    const tx = await contract.mint();
+    const tx = await contract.mintTo(to);
     setPendingTx("Minting SBT");
     const receipt = await tx.wait();
     handleReceipt(receipt);
@@ -67,6 +69,12 @@ const MintNFT = ({ contractAddress }) => {
         </a>
       </h3>
       <h1>Mint an SBT on your smart contract</h1>
+
+      <TextField
+        value={to}
+        label="Mint Nft to"
+        onChange={(e) => setTo(e.target.value)}
+      />
 
       <Button onClick={mint}>Mint SBT</Button>
 

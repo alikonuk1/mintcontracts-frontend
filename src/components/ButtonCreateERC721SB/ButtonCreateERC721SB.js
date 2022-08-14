@@ -25,8 +25,13 @@ const ButtonCreateERC721SB = ({ onDeployed, name, symbol, tokenURI, owner }) => 
     }
     setPendingTx("Sign the transaction for deploying your ERC721SB smart contract.");
 
-    const mintPrice = contract.getMintPrice();
-    const tx = await contract.buildERC721SB(name, symbol, tokenURI, owner [ overrides.value(mintPrice) ]);
+    const mintPrice = contract.MintPrice();
+
+    var overrideOptions = {
+      value: mintPrice
+    };
+
+    const tx = await contract.buildERC721SB(name, symbol, tokenURI, owner, overrideOptions);
     setPendingTx("Deploying ERC721SB contract.");
     const receipt = await tx.wait();
     onDeployed?.(receipt?.events?.[0]?.args?._contract);
