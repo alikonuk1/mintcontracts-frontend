@@ -6,7 +6,7 @@ import { useAccount, useContract, useNetwork, useSigner } from "wagmi";
 import { toast } from "react-toastify";
 import getFactoryAddress from "../../utils/getFactoryAddress";
 
-const ButtonCreateERC721SB = ({ onDeployed, name, symbol, URI, owner }) => {
+const ButtonCreateERC721SB = ({ onDeployed, name, symbol, tokenURI, owner }) => {
   const { data: signer } = useSigner();
   const { data: account } = useAccount();
   const { activeChain } = useNetwork();
@@ -25,7 +25,8 @@ const ButtonCreateERC721SB = ({ onDeployed, name, symbol, URI, owner }) => {
     }
     setPendingTx("Sign the transaction for deploying your ERC721SB smart contract.");
 
-    const tx = await contract.buildERC721SB(name, symbol, URI, owner);
+    const mintPrice = contract.getMintPrice();
+    const tx = await contract.buildERC721SB(name, symbol, tokenURI, owner [ overrides.value(mintPrice) ]);
     setPendingTx("Deploying ERC721SB contract.");
     const receipt = await tx.wait();
     onDeployed?.(receipt?.events?.[0]?.args?._contract);
