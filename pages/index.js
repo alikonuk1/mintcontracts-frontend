@@ -38,14 +38,14 @@ export default function Home() {
 
     <footer className={styles.footer}>
       <a
-        href="https://github.com/alikonuk1/mintcontracts.xyz"
+        href="https://github.com/alikonuk1/mintcontracts-frontend"
         target='_blank'
         className={styles.footera}
       >
         👾 github
       </a>
       <a
-        href="https://polygonscan.com/address/0x74ebee5c642701c011f8f1fcc336af6c524e7754#code"
+        href="https://polygonscan.com/address/0xa63b68da994883d51114f8c9d2d1c4c0762c9038#code"
         target='_blank'
         className={styles.footera}
       >
