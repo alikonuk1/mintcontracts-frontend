@@ -11,7 +11,7 @@ const HomePage = () => {
   return (
     <>
       <h1 className={styles.title}>Soulbound</h1>
-      <p className={styles.desc}>Mint non-transferable NFT's</p>
+      <p className={styles.desc}>Mint non-transferable NFT s</p>
 
       {contractAddress ? (
         <MintNFT contractAddress={contractAddress} />

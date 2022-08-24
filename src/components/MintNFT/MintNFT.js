@@ -70,12 +70,6 @@ const MintNFT = ({ contractAddress }) => {
       </h3>
       <h1>Mint an SBT on your smart contract</h1>
 
-      <TextField
-        value={to}
-        label="Mint Nft to"
-        onChange={(e) => setTo(e.target.value)}
-      />
-
       <Button onClick={mint}>Mint SBT</Button>
 
       <ConfirmedTxModal tokenId={tokenId} contractAddress={contractAddress} />
