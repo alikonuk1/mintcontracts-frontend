@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import NextLink from 'next/link'
 import HomePage from "../src/components/HomePage";
 import styles from "../styles/Home.module.css";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
@@ -13,20 +14,51 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <header className={styles.header}>
+      <div display="flex">
+        <NextLink href='/'>
+          <div className={styles.banner}>
+            <img
+              className={styles.banner1}
+              src='/card.png'
+              alt='mintcontracts.xyz '
+            />
+            <span className='hidden md:flex'>mintcontracts.xyz</span>
+          </div>
+        </NextLink>
+      </div>
+      <div className='flex: none'>
         <ConnectButton />
+      </div>
+    </header>
+
+      <main className={styles.main}>
         <HomePage />
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://github.com/alikonuk1/mintcontracts-frontend"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View open source code
-        </a>
-      </footer>
+    <footer className={styles.footer}>
+      <a
+        href="https://github.com/alikonuk1/mintcontracts.xyz"
+        target='_blank'
+        className={styles.footera}
+      >
+        👾 github
+      </a>
+      <a
+        href="https://polygonscan.com/address/0x74ebee5c642701c011f8f1fcc336af6c524e7754#code"
+        target='_blank'
+        className={styles.footera}
+      >
+        📜 contract
+      </a>
+      <a
+        href="https://www.twitter.com/alikonukk1"
+        target='_blank'
+        className={styles.footera}
+      >
+        🧙🏼‍♂️ alikonuk
+      </a>
+    </footer>
     </div>
   );
 }

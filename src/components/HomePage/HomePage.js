@@ -11,7 +11,7 @@ const HomePage = () => {
   return (
     <>
       <h1 className={styles.title}>Soulbound</h1>
-      <p className={styles.desc}>Mint Souldbound NFT's</p>
+      <p className={styles.desc}>Mint non-transferable NFT's</p>
 
       {contractAddress ? (
         <MintNFT contractAddress={contractAddress} />
@@ -25,9 +25,6 @@ const HomePage = () => {
           p={3}
           gap={3}
         >
-          <Typography variant="h5" color="#000000">
-            Get started: deploy your ERC721SB smart contract.
-          </Typography>
           <CreateERC721SB onDeployed={setContractAddress} />
         </Box>
       )}
