@@ -40,6 +40,7 @@ export default function Home() {
       <a
         href="https://github.com/alikonuk1/mintcontracts-frontend"
         target='_blank'
+        rel="noreferrer"
         className={styles.footera}
       >
         👾 github
@@ -47,6 +48,7 @@ export default function Home() {
       <a
         href="https://polygonscan.com/address/0xa63b68da994883d51114f8c9d2d1c4c0762c9038#code"
         target='_blank'
+        rel="noreferrer"
         className={styles.footera}
       >
         📜 contract
@@ -54,6 +56,7 @@ export default function Home() {
       <a
         href="https://www.twitter.com/alikonukk1"
         target='_blank'
+        rel="noreferrer"
         className={styles.footera}
       >
         🧙🏼‍♂️ alikonuk
